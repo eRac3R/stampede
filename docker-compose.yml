@@ -1,0 +1,13 @@
+# Local infrastructure: free, unlimited, used by tests and load tests.
+# The hosted demo uses Neon (Postgres) and Upstash (Redis) instead.
+services:
+  redis:
+    image: redis:7.4-alpine
+    ports: ["6380:6379"]
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_PASSWORD: stampede
+      POSTGRES_DB: stampede
+    ports: ["5433:5432"]

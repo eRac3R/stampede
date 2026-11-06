@@ -1,0 +1,7 @@
+fastapi>=0.115
+uvicorn[standard]>=0.32
+redis>=5.2
+sqlalchemy[asyncio]>=2.0.36
+psycopg[binary]>=3.2
+certifi>=2024.8
+pydantic>=2.9
